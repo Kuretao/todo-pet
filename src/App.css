@@ -1,0 +1,6 @@
+.main{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    max-height: calc(100vh - clamp(32px, 7vw, 72px));
+}

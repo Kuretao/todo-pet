@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import close from './../../assets/close.svg';
+import open from './../../assets/open.svg';
 import './header.scss'
 
 function Header(props) {
@@ -20,8 +22,10 @@ function Header(props) {
 
     return (
         <header className="header">
-            <div className="open-side" onClick={sidebarToggle}>{props.sidebar ? 'close' : 'open'}</div>
-            <input type="text" placeholder={'search...'} />
+            <div>
+                <img src={props.sidebar ?  close : open } alt="" onClick={sidebarToggle}/>
+            </div>
+            <input type="text" placeholder={'search...'}/>
             <div className="time">{timeString}</div>
         </header>
     );

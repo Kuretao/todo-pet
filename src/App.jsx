@@ -1,9 +1,8 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Header from "./components/header/header.jsx";
 import Sidebar from "./components/sidebar/sidebar.jsx";
+import Welcome from "./components/welcome/welcome.jsx";
 
 function App() {
     const [sidebar, setSidebarToggle] = useState(false);
@@ -11,7 +10,10 @@ function App() {
   return (
     <>
         <Header sidebar={sidebar} setSidebarToggle={setSidebarToggle} />
-        <Sidebar sidebar={sidebar}/>
+        <main className="main">
+            <Sidebar sidebar={sidebar}/>
+            <Welcome/>
+        </main>
     </>
   )
 }

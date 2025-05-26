@@ -1,9 +1,20 @@
 
 
 .sidebar{
-  background-color: var(--dark);
-  height: 100vh;
-  width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 24px;
+
+  span{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    letter-spacing: 1px;
+    cursor: pointer;
+  }
 }
 
 .sidebar--close{

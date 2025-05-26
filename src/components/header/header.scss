@@ -4,8 +4,8 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding:clamp(8px, 7vw, 12px) clamp(24px, 7vw, 128px);
-  background-color: var(--dark);
+  align-items: center;
+  padding: 8px clamp(24px, 7vw, 32px);
 
   > *{
       flex: 0.33;
@@ -16,17 +16,32 @@
     justify-content: flex-end;
   }
 
-  :nth-child(2){
-    display: flex;
-    justify-content: center;
-    max-width: clamp(200px, 7vw, 300px);
-  }
-
   :first-child, :last-child{
     color: #fff;
   }
-
   :first-child{
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  :first-child img{
     cursor: pointer;
+    max-width: 32px;
+    max-height: 32px;
+  }
+
+  input{
+    border: 1px solid #333;
+    border-radius: 99px;
+    padding: 8px 12px;
+    width: 100%;
+    max-width: 15%;
+    color:#fff;
+    transition: max-width 0.5s ease;
+  }
+
+  input:focus{
+    max-width: 100%;
+    border: 1px solid #fff;
   }
 }
