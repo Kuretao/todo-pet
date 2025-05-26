@@ -1,0 +1,32 @@
+
+
+.header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding:clamp(8px, 7vw, 12px) clamp(24px, 7vw, 128px);
+  background-color: var(--dark);
+
+  > *{
+      flex: 0.33;
+  }
+
+  :last-child{
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  :nth-child(2){
+    display: flex;
+    justify-content: center;
+    max-width: clamp(200px, 7vw, 300px);
+  }
+
+  :first-child, :last-child{
+    color: #fff;
+  }
+
+  :first-child{
+    cursor: pointer;
+  }
+}

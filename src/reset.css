@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    transition: all .2s ease;
+    scrollbar-width: none;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+html, body {
+    height: 100%;
+    font-family: sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+h1{
+    font-weight: 800;
+    font-size: 104px;
+    line-height: 104px;
+    letter-spacing: 0;
+    text-align: center;
+}
+
+h2{
+    font-size: 80px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 80px;
+}
+
+h3{
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+h4{
+    font-size: 24px;
+    line-height: 40px;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+h5{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 36px;
+    letter-spacing: -0.5px;
+}
+
+h6{
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 1024px) {
+    h1{
+        font-weight: 800;
+        font-size: 64px;
+        line-height: 64px;
+        letter-spacing: -1px;
+        text-align: center;
+    }
+
+    h2{
+        font-size: 40px;
+        font-weight: 800;
+        letter-spacing: -1px;
+        line-height: 48px;
+    }
+
+    h3{
+        font-size: 32px;
+        line-height: 40px;
+        font-weight: 800;
+        letter-spacing: -1px;
+    }
+
+    h4{
+        font-size: 24px;
+        line-height: 40px;
+        text-transform: uppercase;
+        font-weight: 900;
+    }
+
+    h5{
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 36px;
+        letter-spacing: -0.5px;
+    }
+
+    h6{
+        font-weight: 800;
+        font-size: 12px;
+        line-height: 24px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+}
+
+p{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+    letter-spacing: -1px;
+}
+
+span{
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -1px;
+}
+
+
+:root{
+    --white: #F7FBFA;
+    --dark: #202222;
+    --black: #191A1A;
+    --transparent: transparent;
+    --index: calc(1vw + 1vh);
+}
+
+
