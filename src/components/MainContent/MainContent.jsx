@@ -4,6 +4,7 @@ import cookie from 'cookiejs';
 import {FirstStep} from "../../ui/welcome-steps/firstStep.jsx";
 import {SecondStep} from "../../ui/welcome-steps/secondStep.jsx";
 import {ThridStep} from "../../ui/welcome-steps/thridStep.jsx";
+import Note from "../Note/NoteMain/Note.jsx";
 
 function MainContent() {
     const [step, setStep] = useState(() => {
@@ -51,7 +52,7 @@ function MainContent() {
     }, [step, registration]);
 
     const nextStep = () => {
-        setStep(last => (last < 2 ? last + 1 : last));
+        setStep(last => (last < 3 ? last + 1 : last));
     };
 
     const backStep = () => {
@@ -63,7 +64,7 @@ function MainContent() {
             {step === 0 && <FirstStep nextStep={nextStep} />}
             {step === 1 && <SecondStep step={step} nextStep={nextStep}  backStep={backStep} />}
             {step === 2 && registration === false && <ThridStep registration={registration} setRegistration={setRegistration} step={step} nextStep={nextStep}  backStep={backStep} />}
-            {registration & <></>}
+            {registration && <Note/>}
         </section>
     );
 }
