@@ -76,7 +76,7 @@ h3{
 }
 
 h4{
-    font-size: 24px;
+    font-size: 16px;
     line-height: 100%;
     text-transform: uppercase;
     font-weight: 900;
@@ -84,16 +84,14 @@ h4{
 
 h5{
     font-weight: 700;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 100%;
-    letter-spacing: -0.5px;
 }
 
 h6{
     font-weight: 800;
     font-size: 12px;
     line-height: 100%;
-    letter-spacing: 2px;
     text-transform: uppercase;
 }
 

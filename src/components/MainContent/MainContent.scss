@@ -90,4 +90,66 @@
       }
     }
   }
+
+  .last-step{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 0 clamp(15vw, 7vw, 300px);
+
+    .cards{
+      display: grid;
+      margin-top: 24px;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: minmax(10vh, 30vh);
+      column-gap: clamp(8px, 7vw, 24px);
+      row-gap: clamp(8px, 7vw, 24px);
+
+
+      .card{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 24px;
+        overflow: hidden;
+        background-color: var(--dark);
+        padding: 1vw;
+        cursor: pointer;
+
+        h4,p{
+          z-index: 100
+        }
+        p{
+          font-size: 14px;
+        }
+
+        img{
+          border-radius: 50%;
+          width: clamp(48px, 10vw , 96px);
+          height: clamp(48px, 10vw , 96px);
+          z-index: 0;
+        }
+
+        div{
+          display: flex;
+          flex-direction: column;
+          justify-content: start;
+          gap: 8px;
+          height: 40%;
+        }
+      }
+      .card:hover{
+        box-shadow: 0 0 50px 0 #ffffff30;
+        scale: 1.05;
+      }
+      .card--selected{
+        border: 1px solid #fff;
+        scale: 1.03;
+      }
+    }
+  }
 }

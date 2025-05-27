@@ -1,10 +1,11 @@
-import './welcome.scss';
+import './MainContent.scss';
 import {useEffect, useState} from "react";
 import cookie from 'cookiejs';
 import {FirstStep} from "../../ui/welcome-steps/firstStep.jsx";
 import {SecondStep} from "../../ui/welcome-steps/secondStep.jsx";
+import {ThridStep} from "../../ui/welcome-steps/thridStep.jsx";
 
-function Welcome() {
+function MainContent() {
     const [step, setStep] = useState(() => {
         const cookieValue = cookie.get('test');
         if (cookieValue) {
@@ -18,6 +19,19 @@ function Welcome() {
         return 0;
     });
 
+    const [registration, setRegistration] = useState(() => {
+        const cookieValue = cookie.get('test');
+        if (cookieValue) {
+            try {
+                const parsed = JSON.parse(cookieValue);
+                return parsed.registration || false;
+            } catch {
+                return false;
+            }
+        }
+        return false;
+    });
+
     useEffect(() => {
         const existing = cookie.get('test');
         let parsed = {};
@@ -29,11 +43,12 @@ function Welcome() {
 
         const updated = {
             ...parsed,
-            step
+            step,
+            registration
         };
 
         cookie.set('test', JSON.stringify(updated), 30);
-    }, [step]);
+    }, [step, registration]);
 
     const nextStep = () => {
         setStep(last => (last < 2 ? last + 1 : last));
@@ -47,8 +62,10 @@ function Welcome() {
         <section className={`welcome-wrapper welcome-wrapper--step-${step}`}>
             {step === 0 && <FirstStep nextStep={nextStep} />}
             {step === 1 && <SecondStep step={step} nextStep={nextStep}  backStep={backStep} />}
+            {step === 2 && registration === false && <ThridStep registration={registration} setRegistration={setRegistration} step={step} nextStep={nextStep}  backStep={backStep} />}
+            {registration & <></>}
         </section>
     );
 }
 
-export default Welcome;
+export default MainContent;
